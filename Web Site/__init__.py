@@ -21,6 +21,7 @@ config_file_informations = {
                 'host':'str',
                 'port':'int',
                 'echo': 'bool',
+                'password':'str',
             }
         }
 }
