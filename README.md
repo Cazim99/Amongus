@@ -22,6 +22,7 @@ It is necessary to prepare a database
       `health` int NOT NULL,
       `inside_ship` bool NOT NULL,
       `cordinates` varchar(255) NOT NULL,
+      'baned' inr NOT NULL,
       PRIMARY KEY (`ID`)
     )
 
