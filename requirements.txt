@@ -1,0 +1,12 @@
+pygame
+sqlalchemy
+configparser
+requests
+pillow
+flask
+mysql-connector
+screeninfo
+customtkinter
+pymsgbox
+thorpy
+numpy
