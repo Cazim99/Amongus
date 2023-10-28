@@ -5,6 +5,8 @@ requests
 pillow
 flask
 mysql-connector
+mysql-connector-python
+tk
 screeninfo
 customtkinter
 pymsgbox
