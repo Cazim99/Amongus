@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block aside_content%}
+    <div class="card transparent">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="{{url_for('static', filename = 'images/bug.jpg')}}" alt="italogo">
+            </figure>
+        </div>
+        <div class="card-content terminal">
+
+            <form method="GET" action="mailto:cazimhamidovic@outlook.com" enctype="text/plain">
+                <p class="title is-6" >Subject:</p>
+                <input class="input is-danger" type="text" placeholder="Issue subject" name="subject">
+                <br>
+                <br>
+            
+                <p class="title is-6" >Issue:</p>
+                <textarea class="textarea is-danger" placeholder="Describe issue here..."></textarea>
+            
+                <br/>
+                <input class="button" style="background:red;" type="submit" value="Report" />
+            </form>
+
+            <br/>
+    
+            <div class="content">
+                <p class="title is-6" >Contact:</p>
+                <p >- Tel: +381 62 867 9436</p>
+                <p >- Email: cazimhamidovic@outlook.com</p>
+                <br>
+            </div>
+        </div>
+    </div>
+{% endblock%}

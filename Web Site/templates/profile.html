@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block aside_content %}
+    <form action="/updateprofile" method="post">
+        <div class="card transparent">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="https://th.bing.com/th/id/R.9ead303dae4a4ec135da9db14cb7b114?rik=ras9PN3xRuXO%2bQ&riu=http%3a%2f%2fcliparts.co%2fcliparts%2frTL%2fxyR%2frTLxyRkMc.png&ehk=GDkWm%2b8%2f%2btGZdKqVpW4w55OCAPPXgXk%2fgLrp%2fbkiS%2bw%3d&risl=&pid=ImgRaw&r=0" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content terminal">
+                <div class="media">
+                    <div class="media-content">
+                    <p class="title is-4">{{userinfo.full_name}}</p>
+                    </div>
+                </div>
+                <div class="content">
+                    {% if session['logged_in'] %}
+                        {% if userinfo.password %}
+                            <p style="margin:0">Full name:</p>
+                            <div class="control">
+                                <input id="fullnameedit" class="input" type="text" value="{{userinfo.full_name}}" name="full_name" required>
+                            </div>
+                        {% else %}
+                            <p class="subtitle is-6">Full name: {{userinfo.full_name}}</p>
+                        {% endif %}
+                    {% else %}
+                        <p class="subtitle is-6">Full name: {{userinfo.full_name}}</p>
+                    {% endif %}
+                    {% if session['logged_in'] %}
+                        {% if userinfo.password %}
+                            <p style="margin:0">Username:</p>
+                            <div class="control">
+                                <input readonly style="pointer-events: none;background:gray;" id="usernameedit" class="input" type="text" value="{{userinfo.username}}" name="username" required>
+                            </div>
+                        {% else %}
+                            <p class="subtitle is-6">Username: {{userinfo.username}}</p>
+                        {% endif %}
+                    {% else %}
+                        <p class="subtitle is-6">Username: {{userinfo.username}}</p>
+                    {% endif %}
+                    {% if session['logged_in'] %}
+                        {% if userinfo.password %}
+                            <p style="margin:0">Password:</p>
+                            <div class="control">
+                                <input id="passwordedit" class="input" type="password" value="{{userinfo.password}}" name="password" required>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                    {% if session['logged_in'] %}
+                        {% if userinfo.password %}
+                            <p style="margin:0">E-mail:</p>
+                            <div class="control">
+                                <input id="emailedit" class="input" type="email" value="{{userinfo.email}}" name="email" required>
+                            </div>
+                        {% else %}
+                            <p></p>
+                            <p class="title is-6">Contact:</p>
+                            <p></p>
+                            <p class="subtitle is-6">E-mail: {{userinfo.email}}</p>
+                        {% endif %}
+                    {% else %}
+                        <p></p>
+                        <p class="title is-6">Contact:</p>
+                        <p></p>
+                        <p class="subtitle is-6">E-mail: {{userinfo.email}}</p>
+                    {% endif %}
+                    {% with messages = get_flashed_messages(with_categories = true) %}
+                    {%if messages %}
+                        {% for category , message in messages %}   
+                            <section class="hero is-small {{category}}" style="margin-bottom:10px;margin-top:10px;">
+                                <div class="hero-body">
+                                    <p class="subtitle">
+                                        {{message}}
+                                    </p>
+                                </div>
+                            </section>
+                        {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    <br>
+                    {% if session['logged_in'] %}
+                        {% if userinfo.password %}
+                            <div class="control" style="text-align:left;">
+                                <input class="button is-green" type="submit" value="Save changes">
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </form>
+{%endblock%}

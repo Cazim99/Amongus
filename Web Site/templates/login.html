@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block aside_content %}
+    <form action="/login" method="post">
+        <div class="card transparent">
+            <div class="card-content">
+                <p class="title" style="text-align:center;"> Login </p>
+
+                <div class="field">
+                    <label class="label" >E-mail</label>
+                    <div class="control">
+                        <input id="email" class="input" type="email" placeholder="Example@example.com" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label" >Password</label>
+                    <div class="control">
+                        <input id="password" class="input" type="password" placeholder="**********" name="password" required>
+                    </div>
+                </div>
+
+                {% with messages = get_flashed_messages(with_categories = true) %}
+                    {%if messages %}
+                        {% for category , message in messages %}   
+                            <section class="hero is-small {{category}}" style="margin-bottom:10px;">
+                                <div class="hero-body">
+                                    <p class="subtitle">
+                                        {{message}}
+                                    </p>
+                                </div>
+                            </section>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <div class="control" style="text-align:center;">
+                    <input class="button is-green" type="submit" value="Login">
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block aside_content %}
+    
+    <form action="/sign-up" method="post">
+        <div class="card transparent">
+            <div class="card-content">
+                <p class="title" style="text-align:center;"> Sign up </p>
+
+                <div class="field">
+                    <label class="label" >Full Name</label>
+                    <div class="control">
+                        <input id="full_name" class="input" type="text" placeholder="Petar Petrovic" name="full_name" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" >Username</label>
+                    <div class="control">
+                        <input id="username" class="input" type="text" placeholder="PeTar98" name="username" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" >E-mail</label>
+                    <div class="control">
+                        <input id="email" class="input" type="email" placeholder="Example@example.com" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="label" >Password</label>
+                    <div class="control">
+                        <input id="password" class="input" type="password" placeholder="**********" name="password" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" >Confirm password</label>
+                    <div class="control">
+                        <input id="confirm-password" class="input" type="password" placeholder="**********" name="confirm-password" required>
+                    </div>
+                </div>
+
+                {% with messages = get_flashed_messages(with_categories = true) %}
+                    {%if messages %}
+                        {% for category , message in messages %}   
+                            <section class="hero is-small {{category}}" style="margin-bottom:10px;">
+                                <div class="hero-body">
+                                    <p class="subtitle">
+                                        {{message}}
+                                    </p>
+                                </div>
+                            </section>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <div class="control" style="text-align:center;">
+                    <input class="button is-green" type="submit" value="Sign up">
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

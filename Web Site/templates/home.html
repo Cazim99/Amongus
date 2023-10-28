@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block main_content%}
+{% endblock%}
+
+{% block message_content %}
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {%if messages %}
+            {% for category , message in messages %}   
+                <section class="hero is-small {{category}}" style="margin-bottom:10px;">
+                    <div class="hero-body">
+                        <p class="subtitle">
+                            {{message}}
+                        </p>
+                    </div>
+                </section>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}
+
+
+{% block aside_content %}
+    <div class="card transparent">
+        <div class="card-content">
+            <p class="title" style="text-align:center; font-size:5vh; color:lightgreen;"> Latest news </p>
+            {% for patch in patchs %}
+                <article class="message is-dark">
+                    <div class="message-header">
+                        <p>Patch {{patch.version}} </p>
+                    </div>
+                    <div class="message-body terminal">
+                        <p>{{patch.type}}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

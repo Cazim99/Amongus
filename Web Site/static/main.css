@@ -1,0 +1,139 @@
+#nav-logo-image:hover {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+p,label {
+    color:lightgreen !important;
+}
+
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    background-color: #3C4A4A !important;
+}
+
+/* Kada predje misem preko home */
+.navbar-menu > .navbar-start > .navbar-item:hover{
+    background-color: #4d6262 !important;
+}
+
+/* Kada predje misem preko more */
+.navbar-menu > .navbar-start > .navbar-item > .navbar-link:hover{
+    background-color: #4d6262 !important;
+}
+
+/* Kada predje misem preko username dropdown elementa */
+.navbar-menu > .navbar-start > .navbar-item  > .navbar-dropdown >.navbar-item:hover{
+    background-color: #6e6414 !important;
+}
+
+.navbar-dropdown {
+    border-top: 2px solid #4d6262;
+}
+
+/* Kada predje misem preko username */
+.navbar-menu > .navbar-end > .navbar-item > .navbar-item > .navbar-link:hover{
+    background-color: #4d6262 !important;
+}
+
+
+#navbarmenu {
+    background-color: #3C4A4A !important;
+}
+
+/* Kada predje misem preko username dropdown elementa */
+.navbar-menu > .navbar-end > .navbar-item > .navbar-item > .navbar-dropdown >.navbar-item:hover{
+    background-color: #6e6414 !important;
+}
+
+.navbar-divider {
+    background-color: #4d6262 !important;
+}
+
+.graycolor{
+    background-color: #3C4A4A;
+}
+
+
+.is-green {
+    color:black;
+    background-color: green !important;
+    border: 1px solid black ;
+}
+
+.is-light {
+    background-color: gray !important;
+    border: 1px solid black !important;
+}
+.is-light:hover {
+    border: 1px solid white !important;
+}
+
+.terminal {
+    background-color: #6e6414;
+    border: 5px solid gray !important;
+    border-radius: 5px;
+}
+
+
+article {
+    margin: 10px;
+}
+
+aside {
+    padding-left:10px;
+    padding-right:10px 
+}
+header {
+    margin-bottom: 20px;
+}
+
+.knife-cursor {
+    cursor: url(images/knife.cur),auto;
+}
+
+.fa {
+    padding: 25px;
+    width: 50px;
+    margin: 10px;
+}
+  
+.fa:hover {
+      opacity: 0.7;
+}
+
+.fa-python {
+    background: white;
+    background-image: url('images/python-icon.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    color: white;
+}
+
+.fa-jinja {
+    background: white;
+    color: white;
+    background-image: url('images/jinja-icon.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+.fa-mysql {
+    background: white;
+    color: white;
+    background-image: url('images/mysql-icon.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+
+.transparent {
+    background-color: transparent;
+}

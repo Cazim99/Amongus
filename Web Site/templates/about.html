@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block aside_content%}
+    <div class="card transparent">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="{{url_for('static', filename = 'images/logo.png')}}" alt="italogo">
+            </figure>
+        </div>
+        <div class="card-content terminal">
+            <div class="media">
+                <div class="media-content" >
+                <p class="title is-4" >Author</p>
+                <p class="subtitle is-6" >Ćazim Hamidović</p>
+                </div>
+            </div>
+    
+            <div class="content">
+                <p class="title is-6" >Contact:</p>
+                <p >- Tel: +381 62 867 9436</p>
+                <p >- Email: cazimhamidovic@outlook.com</p>
+                <br>
+            </div>
+        </div>
+    </div>
+{% endblock%}
