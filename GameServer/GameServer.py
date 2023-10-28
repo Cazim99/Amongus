@@ -41,6 +41,7 @@ class GameServer(threading.Thread):
                         'host':'str',
                         'port':'int',
                         'echo': 'bool',
+                        'password':'str',
                     }
                 }
         }
