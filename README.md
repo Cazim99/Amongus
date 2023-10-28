@@ -1,6 +1,5 @@
-# Amongus
-
-potrebno je pripremiti bazu podataka
+# AMONGUS
+It is necessary to prepare a database
 
   ||
   ||
@@ -29,15 +28,15 @@ potrebno je pripremiti bazu podataka
   --------------------------------------------------------
   --------------------------------------------------------
 
-POTREBNO JE DA SU PORTOVI 9999,9998,9997 SLOBODNI, TAKO DA UKOLIKO NISU, IZMENITI (UGLAVNOM JESU NA SVAKOM RACUNARU)
-Takodje podesiti konfiguracije za bazu podataka u config.ini fajlu a to se nalazi u GameServer folderu i folderu WebSite
+PORTS 9999,9998,9997 ARE FREE, SO IF THEY ARE NOT, CHANGE (MOSTLY ON EVERY COMPUTER)
+Also set configurations for the database in config.ini file and this is located in the GameServer folder and the WebSite folder
 
-NAKON TOGA 
-   Pokrenuti main.py iz Web Site foldera 
-   Pokrenuti GameServer.py iz GameServer foldera
+AFTER THAT 
+   Run main.py from Web Site folder 
+   Run GameServer.py from GameServer folder
 
-Otvoriti web sajt na localhost:9997 i napraviti nalog
+Open a website at localhost:9997 and create an account
 
-Pokrenuti igricu iz folder Amongus main.py 
+Run the game from the Folder Amongus-Game -> main.py 
 
-Uzivajte !
+Enjoy!
