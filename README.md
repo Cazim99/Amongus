@@ -28,8 +28,7 @@ It is necessary to prepare a database
   --------------------------------------------------------
   --------------------------------------------------------
 
-PORTS 9999,9998,9997 ARE FREE, SO IF THEY ARE NOT, CHANGE (MOSTLY ON EVERY COMPUTER)
-Also set configurations for the database in config.ini file and this is located in the GameServer folder and the WebSite folder
+Set configurations for the database in config.ini file and this is located in the GameServer folder and the WebSite folder
 
 AFTER THAT 
    Run main.py from Web Site folder 
